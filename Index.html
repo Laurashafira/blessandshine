@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bless & Shine | Skincare & Accessories</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#fff8fb;
+    color:#633b4d;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    padding:16px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 20px rgba(190,90,125,.12);
+}
+
+.logo{
+    font-family:'DM Serif Display',serif;
+    font-size:29px;
+    color:#bd5579;
+}
+
+.logo span{
+    color:#e8a8bd;
+}
+
+.ribbon{
+    font-size:25px;
+    margin-right:5px;
+}
+
+nav ul{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#633b4d;
+    font-weight:600;
+    font-size:14px;
+}
+
+nav ul li a:hover{
+    color:#d15d87;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    padding:65px 8%;
+    gap:55px;
+    background:
+        radial-gradient(circle at top right,#ffdce8,transparent 35%),
+        linear-gradient(135deg,#fff,#fff0f5);
+}
+
+.hero-text small{
+    color:#c2587c;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.hero-text h1{
+    font-family:'DM Serif Display',serif;
+    font-size:75px;
+    line-height:.95;
+    margin:20px 0;
+    color:#873e5a;
+}
+
+.hero-text h1 span{
+    color:#d67b9b;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:520px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:15px 30px;
+    background:#c85b82;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 8px 20px rgba(190,80,120,.2);
+}
+
+.btn:hover{
+    background:#a94568;
+}
+
+/* HERO IMAGE */
+
+.hero-img{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-img img{
+    width:100%;
+    max-width:550px;
+    height:570px;
+    object-fit:cover;
+    border-radius:250px 250px 30px 30px;
+    box-shadow:0 20px 45px rgba(160,70,100,.2);
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:85px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-family:'DM Serif Display',serif;
+    font-size:45px;
+    color:#873e5a;
+}
+
+.title p{
+    margin-top:10px;
+    color:#9a6879;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:white;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    font-size:15px;
+}
+
+/* ================= PROFIL ================= */
+
+.profile{
+    background:#fff0f5;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.profile-card{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(180,80,120,.1);
+    transition:.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-7px);
+}
+
+.profile-card .icon{
+    font-size:43px;
+    margin-bottom:15px;
+}
+
+.profile-card h3{
+    color:#b84f75;
+    margin-bottom:10px;
+}
+
+.profile-card p{
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ================= PRODUK ================= */
+
+.products{
+    background:white;
+}
+
+.product-category{
+    font-family:'DM Serif Display',serif;
+    color:#a44768;
+    font-size:30px;
+    margin:45px 0 25px;
+    text-align:left;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:#fff8fb;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(180,80,120,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(180,80,120,.16);
+}
+
+.product img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    color:#843d58;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    font-size:13px;
+    color:#8d6a76;
+    line-height:1.5;
+}
+
+.price{
+    color:#c6537d;
+    font-size:18px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.buy{
+    width:100%;
+    border:none;
+    background:#d87599;
+    color:white;
+    padding:12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.buy:hover{
+    background:#b64e73;
+}
+
+/* ================= BANNER ================= */
+
+.banner{
+    margin-top:65px;
+    padding:65px 30px;
+    border-radius:35px;
+    text-align:center;
+    background:linear-gradient(135deg,#f7b8cc,#fff);
+}
+
+.banner h2{
+    font-family:'DM Serif Display',serif;
+    font-size:42px;
+    color:#8e405d;
+}
+
+.banner p{
+    margin-top:10px;
+}
+
+/* ================= BMC ================= */
+
+.bmc{
+    background:#fff0f5;
+}
+
+.bmc-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.bmc-card{
+    background:white;
+    padding:25px;
+    border-radius:22px;
+    box-shadow:0 5px 20px rgba(180,80,120,.08);
+    border-top:4px solid #e39ab3;
+}
+
+.bmc-card h3{
+    color:#c3557c;
+    margin-bottom:12px;
+}
+
+.bmc-card p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:#fff0f5;
+    padding:35px;
+    border-radius:30px;
+}
+
+.contact-info h3{
+    font-family:'DM Serif Display',serif;
+    font-size:32px;
+    color:#8e405d;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    margin:18px 0;
+    line-height:1.6;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    border:1px solid #edbfd0;
+    padding:15px;
+    border-radius:15px;
+    font-family:inherit;
+    outline:none;
+    background:#fffafb;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#d87599;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button.submit{
+    border:none;
+    background:#c85b82;
+    color:white;
+    padding:15px;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#8e405d;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+footer p{
+    margin:7px;
+}
+
+/* ================= TOAST ================= */
+
+#toast{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#8e405d;
+    color:white;
+    padding:15px 22px;
+    border-radius:30px;
+    display:none;
+    z-index:2000;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .profile-grid,
+    .bmc-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:750px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-text p{
+        margin:auto;
+    }
+
+    .hero-img img{
+        height:450px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:65px 5%;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:52px;
+    }
+
+    .title h2{
+        font-size:37px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav>
+
+    <div class="logo">
+        <span class="ribbon">🎀</span>
+        Bless <span>&</span> Shine
+    </div>
+
+    <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#bmc">BMC</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- =====================================================
+     BERANDA
+===================================================== -->
+
+<section class="hero" id="beranda">
+
+    <div class="hero-text">
+
+        <small>BEAUTY • STYLE • ELEGANCE</small>
+
+        <h1>
+            Bless<br>
+            <span>& Shine</span>
+        </h1>
+
+        <p>
+            Selamat datang di Bless & Shine 🎀
+            Tempat untuk menemukan skincare dan accessories
+            dengan gaya feminin, coquette, aesthetic,
+            dan elegan untuk melengkapi penampilan sehari-hari.
+        </p>
+
+        <a href="#produk" class="btn">
+            Lihat Produk ♡
+        </a>
+
+    </div>
+
+    <div class="hero-img">
+
+        <!-- FOTO UTAMA -->
+        <img
+        src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85"
+        alt="Bless and Shine Skincare">
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about">
+
+    <div class="title">
+
+        <h2>About Bless & Shine</h2>
+
+        <p>
+            Beauty, skincare & accessories in one place
+        </p>
+
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            <b>Bless & Shine</b> adalah usaha yang bergerak
+            di bidang <b>skincare dan accessories</b>
+            dengan konsep feminin, coquette, cute,
+            aesthetic, dan elegan.
+        </p>
+
+        <br>
+
+        <p>
+            Kami menyediakan berbagai produk kecantikan
+            dan accessories yang dapat digunakan untuk
+            menunjang penampilan sehari-hari.
+            Bless & Shine hadir dengan nuansa pink dan putih
+            yang lembut serta identitas pita coquette.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROFIL
+===================================================== -->
+
+<section class="profile" id="profil">
+
+    <div class="title">
+
+        <h2>Profil Usaha</h2>
+
+        <p>
+            Kenali lebih dekat Bless & Shine
+        </p>
+
+    </div>
+
+    <div class="profile-grid">
+
+        <div class="profile-card">
+
+            <div class="icon">🎀</div>
+
+            <h3>Visi</h3>
+
+            <p>
+                Menjadi usaha skincare dan accessories
+                yang dikenal dengan konsep feminin,
+                aesthetic, berkualitas, dan terjangkau.
+            </p>
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <div class="icon">✨</div>
+
+            <h3>Misi</h3>
+
+            <p>
+                Menyediakan produk skincare dan accessories
+                yang menarik serta memberikan pelayanan
+                yang ramah kepada pelanggan.
+            </p>
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <div class="icon">💗</div>
+
+            <h3>Konsep</h3>
+
+            <p>
+                Menggabungkan skincare dan accessories
+                dengan identitas warna pink-putih,
+                pita coquette, feminin, cute, dan elegan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUK
+===================================================== -->
+
+<section class="products" id="produk">
+
+    <div class="title">
+
+        <h2>Our Products</h2>
+
+        <p>
+            Skincare & Accessories
+        </p>
+
+    </div>
+
+
+    <!-- ================= SKINCARE ================= -->
+
+    <h3 class="product-category">
+        🎀 Skincare Collection
+    </h3>
+
+    <div class="product-grid">
+
+
+        <!-- SKINCARE 1 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=85"
+            alt="Face Wash">
+
+            <div class="product-info">
+
+                <h3>Gentle Face Wash</h3>
+
+                <p>
+                    Pembersih wajah untuk membantu
+                    membersihkan kulit dari kotoran
+                    sehari-hari.
+                </p>
+
+                <div class="price">
+                    Rp35.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Gentle Face Wash')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SKINCARE 2 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=85"
+            alt="Toner">
+
+            <div class="product-info">
+
+                <h3>Brightening Toner</h3>
+
+                <p>
+                    Toner dengan konsep perawatan ringan
+                    untuk melengkapi rutinitas skincare.
+                </p>
+
+                <div class="price">
+                    Rp45.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Brightening Toner')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SKINCARE 3 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=700&q=85"
+            alt="Glow Serum">
+
+            <div class="product-info">
+
+                <h3>Glow Serum</h3>
+
+                <p>
+                    Serum wajah untuk melengkapi
+                    rutinitas perawatan kulit.
+                </p>
+
+                <div class="price">
+                    Rp50.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Glow Serum')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SKINCARE 4 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=85"
+            alt="Moisturizer">
+
+            <div class="product-info">
+
+                <h3>Glow Moisturizer</h3>
+
+                <p>
+                    Pelembap untuk membantu menjaga
+                    kelembapan kulit.
+                </p>
+
+                <div class="price">
+                    Rp55.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Glow Moisturizer')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SKINCARE 5 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85"
+            alt="Sunscreen">
+
+            <div class="product-info">
+
+                <h3>Daily Sunscreen</h3>
+
+                <p>
+                    Sunscreen untuk digunakan sebagai
+                    bagian dari perawatan kulit sehari-hari.
+                </p>
+
+                <div class="price">
+                    Rp45.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Daily Sunscreen')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ACCESSORIES ================= -->
+
+    <h3 class="product-category">
+        💗 Coquette Accessories
+    </h3>
+
+    <div class="product-grid">
+
+
+        <!-- ACCESSORIES 1 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+            alt="Heart Necklace">
+
+            <div class="product-info">
+
+                <h3>Heart Necklace</h3>
+
+                <p>
+                    Kalung berbentuk hati dengan desain
+                    feminin dan manis.
+                </p>
+
+                <div class="price">
+                    Rp30.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Heart Necklace')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACCESSORIES 2 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
+            alt="Sweet Ring">
+
+            <div class="product-info">
+
+                <h3>Sweet Ring</h3>
+
+                <p>
+                    Cincin dengan desain simple,
+                    cute, dan feminin.
+                </p>
+
+                <div class="price">
+                    Rp20.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Sweet Ring')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACCESSORIES 3 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=85"
+            alt="Pearl Bracelet">
+
+            <div class="product-info">
+
+                <h3>Pearl Bracelet</h3>
+
+                <p>
+                    Gelang mutiara dengan tampilan
+                    elegan dan aesthetic.
+                </p>
+
+                <div class="price">
+                    Rp25.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Pearl Bracelet')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACCESSORIES 4 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=85"
+            alt="Pearl Accessories">
+
+            <div class="product-info">
+
+                <h3>Pearl Collection</h3>
+
+                <p>
+                    Koleksi accessories bernuansa
+                    pearl dan feminin.
+                </p>
+
+                <div class="price">
+                    Rp35.000
+                </div>
+
+                <button
+                class="buy"
+                onclick="addCart('Pearl Collection')">
+
+                    Tambah ke Keranjang
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BANNER -->
+
+    <div class="banner">
+
+        <h2>
+            Bless Your Beauty 🎀
+        </h2>
+
+        <p>
+            Your beauty, your style, your shine.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BUSINESS MODEL CANVAS
+===================================================== -->
+
+<section class="bmc" id="bmc">
+
+    <div class="title">
+
+        <h2>
+            Business Model Canvas
+        </h2>
+
+        <p>
+            Model bisnis Bless & Shine
+        </p>
+
+    </div>
+
+
+    <div class="bmc-grid">
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Customer Segments
+            </h3>
+
+            <p>
+                Remaja, pelajar, mahasiswa, dan perempuan
+                yang menyukai skincare, accessories,
+                serta gaya feminin dan coquette.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Value Proposition
+            </h3>
+
+            <p>
+                Menawarkan skincare dan accessories
+                dengan desain menarik, aesthetic,
+                feminin, dan harga yang terjangkau.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Channels
+            </h3>
+
+            <p>
+                Website, Instagram, WhatsApp,
+                media sosial, promosi dari teman,
+                dan penjualan secara langsung.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Customer Relationships
+            </h3>
+
+            <p>
+                Pelayanan ramah, fast response,
+                promo, rekomendasi produk,
+                dan komunikasi melalui media sosial.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Revenue Streams
+            </h3>
+
+            <p>
+                Pendapatan berasal dari penjualan
+                skincare, accessories, paket hadiah,
+                dan bundling produk.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Key Resources
+            </h3>
+
+            <p>
+                Produk skincare, accessories,
+                supplier, modal, kemasan,
+                website, dan media sosial.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Key Activities
+            </h3>
+
+            <p>
+                Pengadaan produk, promosi,
+                pemasaran, penjualan, packing,
+                dan pelayanan pelanggan.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Key Partners
+            </h3>
+
+            <p>
+                Supplier skincare, supplier accessories,
+                jasa pengiriman, percetakan kemasan,
+                dan partner promosi.
+            </p>
+
+        </div>
+
+
+        <div class="bmc-card">
+
+            <h3>
+                Cost Structure
+            </h3>
+
+            <p>
+                Biaya pembelian produk, kemasan,
+                promosi, pengiriman, website,
+                dan biaya operasional.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT PERSON
+===================================================== -->
+
+<section class="contact" id="kontak">
+
+    <div class="title">
+
+        <h2>
+            Contact Person
+        </h2>
+
+        <p>
+            Hubungi Bless & Shine 🎀
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Laura Shafira 🎀
+            </h3>
+
+
+            <div class="contact-item">
+
+                📱 <b>WhatsApp</b><br>
+
+                0812-3456-7890
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📸 <b>Instagram</b><br>
+
+                @blessandshine
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📧 <b>Email</b><br>
+
+                blessandshine@gmail.com
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📍 <b>Lokasi</b><br>
+
+                Medan, Sumatera Utara
+
+            </div>
+
+        </div>
+
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+            type="text"
+            placeholder="Nama kamu"
+            required>
+
+
+            <input
+            type="email"
+            placeholder="Email kamu"
+            required>
+
+
+            <input
+            type="text"
+            placeholder="Produk yang ingin ditanyakan">
+
+
+            <textarea
+            placeholder="Tulis pesan kamu..."
+            required></textarea>
+
+
+            <button
+            type="submit"
+            class="submit">
+
+                Kirim Pesan 💗
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        🎀 Bless & Shine
+    </p>
+
+    <p>
+        Skincare • Accessories • Beauty
+    </p>
+
+    <p>
+        Contact Person: Laura Shafira
+    </p>
+
+    <p>
+        ©️ 2026 Bless & Shine
+    </p>
+
+</footer>
+
+
+<!-- TOAST -->
+
+<div id="toast"></div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function addCart(product){
+
+    const toast =
+    document.getElementById("toast");
+
+    toast.innerHTML =
+    "🎀 " + product +
+    " berhasil ditambahkan!";
+
+    toast.style.display =
+    "block";
+
+    setTimeout(function(){
+
+        toast.style.display =
+        "none";
+
+    },2500);
+
+}
+
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    const toast =
+    document.getElementById("toast");
+
+    toast.innerHTML =
+    "💗 Pesan berhasil dikirim!";
+
+    toast.style.display =
+    "block";
+
+    setTimeout(function(){
+
+        toast.style.display =
+        "none";
+
+    },2500);
+
+}
+
+</script>
+
+</body>
+</html>
